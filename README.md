@@ -4,16 +4,16 @@ Aplicação desenvolvida para controle de fluxo e solicitações de materiais.
 
 # Iniciando  
 
-É necessário clonar o repositório. Para o client:
+É necessário clonar o repositório e baixar as dependências. Para o client, executar:
 
 ```
-npm start
-ng serve
+npm i
+npm start ou ng serve
 ```
 
-Para o serviço REST deixei um JAR no root do repositório para que seja executado mais facilmente.
+Para o serviço REST deixei um JAR no root do repositório para que seja executado mais fácilmente.
 
-Porém é necessário checar o application.properties e configurar a base corretamente.
+Porém é necessário checar o application.properties e configurar a base corretamente para execução correta do jar.
 
 ### Tecnologias, ferramentas e arquitetura  
 
