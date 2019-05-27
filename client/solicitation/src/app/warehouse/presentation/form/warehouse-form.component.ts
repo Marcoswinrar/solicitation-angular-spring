@@ -50,7 +50,7 @@ export class WarehouseFormComponent implements OnInit, OnDestroy, AfterViewCheck
     const finalizeRequest$ = this.presenter.aprovesRequest(this.request.id, request)
       .pipe(tap(() => {
         this.action.onSuccess('Requisição finalizada com sucesso!');
-        this.itemDeleted.emit(request);
+        this.itemDeleted.emit(this.request);
       }),
         catchError(err => {
           return throwError(err);

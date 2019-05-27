@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit, OnChanges, ChangeDetectorRef } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 import { Subject } from 'rxjs';
 import { takeUntil,  map } from 'rxjs/operators';
@@ -33,7 +33,11 @@ export class WarehouseListComponent implements OnInit, OnDestroy {
   }
 
   update(request) {
-    const index = this.requests.indexOf(request.id);
-    this.requests.splice(index, 1);
+    
+    const index = this.requests.indexOf(request);
+
+    if(index > -1) {
+      this.requests.splice(index, 1);
+    }
   }
 }
