@@ -15,6 +15,8 @@ Para o serviço REST deixei um JAR no root do repositório para que seja executa
 
 Porém é necessário checar o application.properties e configurar a base corretamente para execução correta do jar.
 
+Caso não queira executar com o jar, configurar também o application.properties e simplesmente executar no STS ou eclipse.
+
 ### Tecnologias, ferramentas e arquitetura  
 
 Angular 7 + Material  
