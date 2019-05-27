@@ -9,7 +9,6 @@ import { WarehousePresenter } from '../domain/boundaries/warehouse.presenter';
 import { DefaultWarehousePresenter } from './presenter/default-warehouse.presenter';
 import { WarehouseListComponent } from './list/warehouse-list.component';
 import { WarehouseFormComponent } from './form/warehouse-form.component';
-import { FluxErrorComponent } from 'src/app/shared/components/error.component';
 import { FluxErrorModule } from 'src/app/shared/components/flux-error.module';
 
 @NgModule({

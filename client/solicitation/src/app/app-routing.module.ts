@@ -6,6 +6,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'solicitante', pathMatch: 'full' },
   { path: 'solicitante', loadChildren: './requester/requester.module#RequesterModule' },
   { path: 'almoxarifado', loadChildren: './warehouse/warehouse.module#WarehouseModule' },
+  { path: 'administrativo', loadChildren: './administrative/administrative.module#AdministrativeModule' },
   { path: '**', redirectTo: 'solicitante' }
 ];
 

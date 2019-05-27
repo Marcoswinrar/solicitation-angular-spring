@@ -1,0 +1,7 @@
+<div fxLayout='column' fxLayoutGap='8px'>
+  <flux-administrative-filter (propsToFilter)="filterList($event)"></flux-administrative-filter>
+  <flux-administrative-card 
+    *ngFor='let request of requests'
+    [request]='request'>
+  </flux-administrative-card>
+</div>

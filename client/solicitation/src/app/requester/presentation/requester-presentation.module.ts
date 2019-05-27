@@ -10,8 +10,8 @@ import { RequestsComponent } from './requests/requests.component';
 import { RequestsNewComponent } from './new/requests-new.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RequestsCardComponent } from './requests/card/requests-card.component';
-import { RequestStatusPipe } from 'src/app/shared/pipes/request-status.pipe';
 import { FluxErrorModule } from 'src/app/shared/components/flux-error.module';
+import { RequestStatusPipeModule } from 'src/app/shared/pipes/request-status-pipe.module';
 
 @NgModule({
   imports: [
@@ -19,14 +19,14 @@ import { FluxErrorModule } from 'src/app/shared/components/flux-error.module';
     MaterialUIModule,
     RequesterRouting,
     ReactiveFormsModule,
-    FluxErrorModule
+    FluxErrorModule,
+    RequestStatusPipeModule
   ],
   declarations: [
     RequesterComponent,
     RequestsComponent,
     RequestsNewComponent,
-    RequestsCardComponent,
-    RequestStatusPipe
+    RequestsCardComponent
   ],
   providers: [
     {

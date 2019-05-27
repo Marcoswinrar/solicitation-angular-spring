@@ -1,0 +1,29 @@
+<mat-card>
+  <form [formGroup]='filterForm'>
+    <div fxLayout='column' fxLayout.gt-xs='row'>
+      <mat-form-field fxFlex='50'>
+        <input formControlName='requesterName' matInput placeholder="Solicitante">
+      </mat-form-field>
+      <mat-form-field fxFlex='50'>
+        <mat-select formControlName='status' placeholder="Status">
+          <mat-option value="true">Aprovado</mat-option>
+          <mat-option value="false">Reprovado</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div fxLayout='column' fxLayout.gt-xs='row'>
+      <mat-form-field fxFlex>
+        <input formControlName='itemDescription' matInput placeholder="Descrição">
+      </mat-form-field>
+    </div>
+    <div  
+      fxLayout='column'
+      fxLayout.gt-xs='row'
+      fxLayoutALign='center center' 
+      fxLayoutAlign.gt-xs='end end'
+      fxLayoutGap='8px'>
+      <button  mat-raised-button (click)='clearFilters()'>Limpar</button>
+      <button  class="button" mat-raised-button (click)='filter()'>Filtrar</button>
+    </div>
+  </form>
+</mat-card>

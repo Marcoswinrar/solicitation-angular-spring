@@ -1,0 +1,14 @@
+<mat-card class='request-card border'>
+  <mat-card-title class="title">
+    <span> Solicitante : {{ request.requesterName }}</span>
+  </mat-card-title>
+  <mat-card-subtitle class="subtitle">
+    <span>{{ request.status | requestStatus }}.</span>
+  </mat-card-subtitle>
+  <mat-card-content class="content">
+    <div fxLayout='column'>
+      <span>{{ request.itemDescription }}</span>
+      <span>{{ request.price | currency:'BRL' }}</span>
+    </div>
+  </mat-card-content>
+</mat-card>
