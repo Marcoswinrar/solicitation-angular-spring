@@ -1,0 +1,18 @@
+@import '../../../../colors.scss';
+
+.header {
+  background: $primary;
+
+  > .row {
+
+    > .title {
+      font-size: 2em;
+      color: $white;
+      font-weight: lighter;
+    }
+  }
+}
+
+::ng-deep .mat-ink-bar {
+  background-color: $primary !important;   
+}

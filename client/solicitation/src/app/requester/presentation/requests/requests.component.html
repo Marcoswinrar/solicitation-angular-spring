@@ -1,0 +1,12 @@
+<div class="container" fxLayoutGap='8px'>
+  <div fxLayout='column'>
+    <flux-requests-card 
+      *ngFor='let request of requests'
+      [request]='request'>
+    </flux-requests-card>
+  </div>
+  <flux-erro-component
+    *ngIf='!requests?.length'
+    [msg]="'Não há solicitações até o exato momento!'">
+  </flux-erro-component>
+</div>

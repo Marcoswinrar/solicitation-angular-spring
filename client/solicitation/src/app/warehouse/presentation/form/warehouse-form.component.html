@@ -1,0 +1,58 @@
+<mat-card class="form-card">
+  <form [formGroup]='warehouseForm'>
+    <div fxLayout='column' fxLayout.gt-xs='row'>
+      <mat-form-field fxFlex='50'>
+        <input 
+          matInput
+          placeholder="Nome do solicitante"
+          value='{{request.requesterName}}' 
+          readonly>
+      </mat-form-field>
+      <mat-form-field fxFlex='50'>
+        <input 
+          matInput
+          type='number' 
+          placeholder="Preço do produto"
+          value='{{request.price}}'
+          readonly>
+        <span matPrefix>R$&nbsp;</span>
+      </mat-form-field>
+    </div>
+    <div fxLayout='column' fxLayout.gt-xs='row'>
+      <mat-form-field fxFlex>
+        <input 
+          matInput
+          type="text"
+          placeholder="Descrição do item"
+          value='{{request.itemDescription}}'
+          readonly>
+      </mat-form-field>
+      <mat-form-field fxFlex='30'>
+        <mat-select formControlName='status' placeholder="Ação" required>
+          <mat-option value="true">Aprovar</mat-option>
+          <mat-option value="false">Reprovar</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div fxLayout='column' *ngIf='warehouseForm.get("status").value === "false"'>
+      <mat-form-field>
+        <input 
+          matInput
+          formControlName='observation'
+          type=text
+          placeholder="Observações" 
+          required>
+      </mat-form-field>
+    </div>
+    <div fxLayout='column' fxLayoutAlign.gt-xs='end end'>
+      <button
+        fxFlex='50%' 
+        mat-raised-button
+        [disabled]='!warehouseForm.valid'
+        class="button"
+        (click)='finalize()'>
+        Finalizar
+      </button>
+    </div>
+  </form>
+</mat-card>

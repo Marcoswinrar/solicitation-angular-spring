@@ -1,0 +1,33 @@
+<div class='new-request'>
+  <mat-card class="card">
+    <div class="form">
+      <form [formGroup]='requestForm'>
+        <div fxLayout='column' fxLayout.gt-xs='row'>
+          <mat-form-field fxFlex='50'>
+            <input matInput formControlName='requesterName' placeholder="Nome do solicitante" required>
+          </mat-form-field>
+          <mat-form-field fxFlex='50'>
+            <input matInput formControlName='price' type='number' placeholder="Preço do produto" required>
+            <span matPrefix>R$&nbsp;</span>
+          </mat-form-field>
+        </div>
+        <div fxLayout='column' fxLayout.gt-xs='row'>
+          <mat-form-field fxFlex>
+            <input matInput formControlName='itemDescription' type="text" placeholder="Descrição do item" required>
+          </mat-form-field>
+        </div>
+        <div fxlayout='column' fxLayoutAlign='center center' fxLayoutAlign.gt-xs='end end'>
+          <button 
+            fxFlex 
+            fxFlex.gt-xs='15' 
+            mat-raised-button
+            [disabled]='!requestForm.valid'
+            class="button"
+            (click)='request()'>
+            Solicitar
+          </button>
+        </div>
+      </form>
+    </div>
+  </mat-card>
+</div>

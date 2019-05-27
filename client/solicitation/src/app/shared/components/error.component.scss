@@ -1,0 +1,14 @@
+@import '../../../colors.scss';
+
+.error {
+  font-size: 1em;
+  text-align: center;
+  font-weight: lighter;
+
+  > .error-icon {
+      font-size: 36px;
+      height: 36px;
+      width: 36px;
+      color: $primary;
+    }
+}

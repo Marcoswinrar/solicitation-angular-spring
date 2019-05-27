@@ -1,0 +1,11 @@
+<div class='warehouse-list' fxLayout='column' fxLayoutGap='16px'>
+  <flux-warehouse-form
+    (itemDeleted)='update($event)'
+    *ngFor='let request of requests'
+    [request]='request'>
+  </flux-warehouse-form>
+  <flux-erro-component
+    *ngIf='!requests?.length'
+    [msg]="'Não há solicitações pendentes no momento!'">
+  </flux-erro-component>
+</div>
